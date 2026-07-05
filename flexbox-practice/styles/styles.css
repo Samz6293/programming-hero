@@ -1,0 +1,52 @@
+*{
+    /* border: 1px solid red; */
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background: rgb(52, 0, 70);
+    color:white;
+}
+h1 {
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+
+/* Navbar flexbox practice */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav >.logoLinks > .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logoLinks {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+nav > .logoLinks > img {
+    width: 60px;
+}
+
+a{
+    color: yellow;
+    padding: 5px;
+}
+
+.nav-button > button {
+    background-color: rgb(191, 0, 102);
+    color: rgb(255, 255, 255);
+    border-radius: 3px;
+    border: none;
+    padding: 8px 16px 8px 16px;
+}
