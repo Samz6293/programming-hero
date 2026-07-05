@@ -13,7 +13,7 @@ h1 {
     margin: 20px 0px 0px 0px;
 }
 
-/* Navbar flexbox practice */
+/* Navbar flexbox */
 nav {
     display: flex;
     flex-direction: row;
@@ -38,15 +38,58 @@ nav > .logoLinks > img {
     width: 60px;
 }
 
-a{
-    color: yellow;
+.links > a{
+    color: rgb(191, 0, 102);
     padding: 5px;
+    text-decoration: none;
 }
 
-.nav-button > button {
+.continue {
     background-color: rgb(191, 0, 102);
     color: rgb(255, 255, 255);
     border-radius: 3px;
     border: none;
     padding: 8px 16px 8px 16px;
+}
+
+/* hero flexbox */
+.hero {
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    gap: 30px;
+}
+
+.hero-headers {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.coding-image {
+    width: 500px;
+    border-radius: 20px;
+}
+
+.hero-paragraph {
+    max-width: 300px;
+    text-align: center;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    gap: 20px;
+}
+
+.progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
