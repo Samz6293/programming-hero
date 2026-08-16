@@ -17,6 +17,32 @@ function mostExpensive(expenses: Expense[]): number {
     }, expenses[0].amount);
 }
 
+function mostExpensiveObject(expenses: Expense[]): Expense {
+    return expenses.reduce((previousExpense, expense) => {
+        if(expense.amount > previousExpense.amount) {
+            return expense;
+        }
+        return previousExpense;
+    }, expenses[0]);
+}
+
+function categoryExpense(expenses: Expense[], category: string): Expense[] | string {
+    const categorized = expenses.filter((expense)=> expense.category === category);
+    if(categorized.length > 0){
+        return categorized;
+    }
+    return `No expenses in  "${category}" category`;
+}
+
+function calculateCategoryExpense(expenses: Expense[], category: string): number | string {
+    const categorized = expenses.filter((expense)=> expense.category === category);
+    if(categorized.length > 0){
+        return categorized
+        .reduce((previousExpense,currentExpense)=> previousExpense + currentExpense.amount,0);
+    }
+    return `No expenses in  "${category}" category`;
+}
+
 const expenses: Expense[] = [
   { title: "Groceries", amount: 4500, category: "Food" },
   { title: "Bus Pass", amount: 1200, category: "Transport" },
@@ -29,4 +55,23 @@ const expenses: Expense[] = [
 ];
 
 console.log("Total spent: ", totalSpend(expenses));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
 console.log("Most expensive product: ", mostExpensive(expenses));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
+console.log("Most expensive product object: ", mostExpensiveObject(expenses));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
+console.log("Expense by category: ", categoryExpense(expenses, "Food"));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
+console.log("Expense by category: ", categoryExpense(expenses, "Carting"));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
+console.log("Expenses in category(total): ", calculateCategoryExpense(expenses, "Transport"));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
+console.log("Expenses in category(total): ", calculateCategoryExpense(expenses, "Carting"));
+console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    `)
