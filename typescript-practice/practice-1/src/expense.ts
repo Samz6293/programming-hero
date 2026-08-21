@@ -14,7 +14,7 @@ function mostExpensive(expenses: Expense[]): number {
             return expense.amount
         }
         return previousExpense;
-    }, expenses[0].amount);
+    }, 0);
 }
 
 function mostExpensiveObject(expenses: Expense[]): Expense {
@@ -23,7 +23,7 @@ function mostExpensiveObject(expenses: Expense[]): Expense {
             return expense;
         }
         return previousExpense;
-    }, expenses[0]);
+    });
 }
 
 function categoryExpense(expenses: Expense[], category: string): Expense[] | string {

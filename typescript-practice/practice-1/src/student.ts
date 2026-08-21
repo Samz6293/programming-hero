@@ -43,7 +43,7 @@ function highestAverage(students: Student[]): Student {
         }
         return acc;
     }
-    ,students[0]);
+    ,);
 }
 
 const students: Student[] = [
@@ -72,7 +72,13 @@ const students: Student[] = [
     marks: [28, 35, 42, 31, 39]
   }
 ];
-console.log(averageMarks(students[0]));
-console.log(averageMarks(students[3]));
+console.log(averageMarks({
+    name: "Rahim",
+    marks: [78, 85, 92, 74, 88]
+  } ));
+console.log(averageMarks({
+    name: "Farhan",
+    marks: [28, 35, 42, 31, 39]
+  }));
 console.log("Passed students: ", passedStudents(students));
 console.log(highestAverage(students));

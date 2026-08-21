@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function safeProcessor(value) {
     if (typeof value === "string") {
         return `
@@ -26,3 +27,4 @@ console.log(safeProcessor("Hello, World!"));
 console.log(safeProcessor(45));
 console.log(safeProcessor([23, 12, 12, 435, 7, 8, 9]));
 console.log(safeProcessor({ name: "motin", joke: 123 }));
+//# sourceMappingURL=safeProcessor.js.map

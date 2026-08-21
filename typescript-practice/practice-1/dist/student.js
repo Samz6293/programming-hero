@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 ;
 function averageMarks(student) {
     const [studentName, studentMarks] = Object.values(student);
@@ -32,7 +33,7 @@ function highestAverage(students) {
             return student;
         }
         return acc;
-    }, students[0]);
+    });
 }
 const students = [
     {
@@ -60,7 +61,14 @@ const students = [
         marks: [28, 35, 42, 31, 39]
     }
 ];
-console.log(averageMarks(students[0]));
-console.log(averageMarks(students[3]));
+console.log(averageMarks({
+    name: "Rahim",
+    marks: [78, 85, 92, 74, 88]
+}));
+console.log(averageMarks({
+    name: "Farhan",
+    marks: [28, 35, 42, 31, 39]
+}));
 console.log("Passed students: ", passedStudents(students));
 console.log(highestAverage(students));
+//# sourceMappingURL=student.js.map

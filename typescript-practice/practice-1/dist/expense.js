@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 function totalSpend(expenses) {
     return expenses.reduce((previousExpense, expense) => previousExpense + expense.amount, 0);
 }
@@ -8,7 +9,7 @@ function mostExpensive(expenses) {
             return expense.amount;
         }
         return previousExpense;
-    }, expenses[0].amount);
+    }, 0);
 }
 function mostExpensiveObject(expenses) {
     return expenses.reduce((previousExpense, expense) => {
@@ -16,7 +17,7 @@ function mostExpensiveObject(expenses) {
             return expense;
         }
         return previousExpense;
-    }, expenses[0]);
+    });
 }
 function categoryExpense(expenses, category) {
     const categorized = expenses.filter((expense) => expense.category === category);
@@ -64,3 +65,4 @@ console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 console.log("Expenses in category(total): ", calculateCategoryExpense(expenses, "Carting"));
 console.log(`~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     `);
+//# sourceMappingURL=expense.js.map
