@@ -1,4 +1,4 @@
-
+// list rendering in react
 const Names = () => {
 
     let big3: string[] = ["Samz", "Ghost", "Humzzy"];
